@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="2.5" group="system" method="upgrade">
+    <name>PLG_SYSTEM_GOOGLIC_ANALYTICS</name>
+    <author>Lyr!C</author>
+    <creationDate>2013-01-03</creationDate>
+    <copyright>(C) 2012 JoomliC. All rights reserved.</copyright>
+    <license>GNU/GPL</license>
+    <authorEmail>info@joomlic.com</authorEmail>
+    <authorUrl>www.joomlic.com</authorUrl>
+    <version>1.2.4</version>
+    <description>PLG_SYSTEM_GOOGLIC_ANALYTICS_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="googlic_analytics">googlic_analytics.php</filename>
+        <filename>index.html</filename>
+    	<folder>elements</folder>
+	</files>
+	
+	<media destination="googlic_analytics" folder="media">
+		<filename>index.html</filename>
+		<folder>images</folder>
+	</media>
+	
+    <languages folder="language">
+    	<language tag="en-GB">en-GB/en-GB.plg_system_googlic_analytics.sys.ini</language>
+    	<language tag="en-GB">en-GB/en-GB.plg_system_googlic_analytics.ini</language>
+    	<language tag="fr-FR">fr-FR/fr-FR.plg_system_googlic_analytics.sys.ini</language>
+    	<language tag="fr-FR">fr-FR/fr-FR.plg_system_googlic_analytics.ini</language>
+    	<language tag="ru-RU">ru-RU/ru-RU.plg_system_googlic_analytics.sys.ini</language>
+    	<language tag="ru-RU">ru-RU/ru-RU.plg_system_googlic_analytics.ini</language>
+    </languages>
+
+    <config>
+    	<fields name="params">
+    		<fieldset name="googlic" addfieldpath="/plugins/system/googlic_analytics/elements">
+    			
+    			<field type="title" label="PLG_SYSTEM_GOOGLIC_ANALYTICS_GOOGLE_TITRE" style="STYLE_BOX" />
+        		<field type="title" label="PLG_SYSTEM_GOOGLIC_ANALYTICS_GOOGLE_NOTE" style="STYLE_NOTE" />
+				<field name="idgoogle"
+    				type="text"
+    				label="PLG_SYSTEM_GOOGLIC_ANALYTICS_ID_SUIVI_LABEL"
+    				description="PLG_SYSTEM_GOOGLIC_ANALYTICS_ID_SUIVI_DESC"
+    				/>
+    			<field type="title" label=" " style="STYLE_NOTE" />
+				
+    			<field type="title" label="PLG_SYSTEM_GOOGLIC_ANALYTICS_FILTRES_TITRE" style="STYLE_BOX" />
+        		<field type="title" label="PLG_SYSTEM_GOOGLIC_ANALYTICS_FILTRES_NOTE" style="STYLE_NOTE" />
+				<field name="groupes-exclus"
+    				type="usergroup"
+					label="PLG_SYSTEM_GOOGLIC_ANALYTICS_GROUPES_EXCLUS_LABEL"
+					description="PLG_SYSTEM_GOOGLIC_ANALYTICS_GROUPES_EXCLUS_DESC"
+					multiple="true"
+					/>
+				<field type="title" label=" " style="STYLE_NOTE" />
+				
+				<field type="title" label="PLG_SYSTEM_GOOGLIC_ANALYTICS_OPTION_TITRE" style="STYLE_BOX" />
+        		<field type="title" label="PLG_SYSTEM_GOOGLIC_ANALYTICS_OPTION_NOTE" style="STYLE_NOTE" />
+				<field type="title" label="PLG_SYSTEM_GOOGLIC_ANALYTICS_OPTION_ATTENTION" style="STYLE_RED" />
+				<field type="title" label=" " style="STYLE_NOTE" />
+				
+				<field name="option"
+    				type="list"
+    				label="PLG_SYSTEM_GOOGLIC_ANALYTICS_OPTION_LABEL"
+    				description="PLG_SYSTEM_GOOGLIC_ANALYTICS_OPTION_DESC"
+    				default="0">
+    					<option value="0">PLG_SYSTEM_GOOGLIC_ANALYTICS_OPTION_DOMAINE</option>
+						<option value="1">PLG_SYSTEM_GOOGLIC_ANALYTICS_OPTION_SOUSDOMAINES</option>
+						<option value="2">PLG_SYSTEM_GOOGLIC_ANALYTICS_OPTION_EXT_DOMAINES</option>
+    			</field>
+    			<field type="title" label="PLG_SYSTEM_GOOGLIC_ANALYTICS_DOMAINE_NOTE" style="STYLE_NOTE" />
+				
+    			
+    				
+			</fieldset>
+		</fields>
+	</config>
+</extension>
